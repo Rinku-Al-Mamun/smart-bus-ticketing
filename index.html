@@ -13,7 +13,7 @@
 </head>
 
 <body class="inter-font raleway-font">
-    <section class="total-section">
+    <section id="main-part" class="total-section">
         <nav class="nav-section mx-24">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -189,9 +189,9 @@
                                         </div>
                                     </div>
                                     <div class="">
-                                        <button class="bg-[#1DD10026] btn"><img src="images/seat-green.png" alt=""><span
-                                                class="text-[#1DD100]">40
-                                                Seats left</span></button>
+                                        <button class="bg-[#1DD10026] text-[#1DD100] btn"><img src="images/seat-green.png" alt=""><span
+                                                class="seat-decrement">40
+                                                </span>Seats left</button>
                                     </div>
                                 </div>
                                 <div>
@@ -232,7 +232,7 @@
         
                                 </div>
                                 <div>
-                                    <h1 class="text-2xl font-bold">550 TK</h1>
+                                    <h3 class="text-2xl font-bold"><span id="seatprice">550</span>TK</h3>
                                     <p>Per Seat</p>
                                 </div>
                             </div>
@@ -277,13 +277,13 @@
                                 <div class="flex justify-center gap-20 my-1 w-full">
                                     <div class="flex justify-center gap-16 my-1 w-full">
                                         <kbd>A</kbd>
-                                        <kbd class="kbd">A1</kbd>
-                                        <kbd class="kbd">A2</kbd>
+                                        <kbd id="A2" class="kbd">A2</kbd>
+                                        <kbd id="A1" class="kbd">A1</kbd>
         
                                     </div>
                                     <div class="flex justify-center gap-16 my-1 w-full">
-                                        <kbd class="kbd">A3</kbd>
-                                        <kbd class="kbd">A4</kbd>
+                                        <kbd id="A3" class="kbd">A3</kbd>
+                                        <kbd id="A4" class="kbd">A4</kbd>
         
                                     </div>
                                 </div>
@@ -320,28 +320,29 @@
                         <div>
                             <div class="border bg-[#F7F8F8] p-5">
                                 <div class="flex justify-between m-3">
-                                    <h6>Seat <span>2</span></h6>
+                                    <h6>Seat <span id="seat-increment" class="bg-[#1DD100]">0</span></h6>
                                     <h6>Class</h6>
-                                    <h6>Price</h6>
+                                    <h6 id="price-increment">Price</h6>
         
                                 </div>
                                 <hr>
                                 <div class="flex justify-between m-3">
                                     <span>A2</span>
                                     <span>Economoy</span>
-                                    <span>550</span>
+                                    <span id="seat-price">550</span>
                                 </div>
                                 <hr>
                                 <div class="flex justify-between m-3">
                                     <span>Total Price</span>
-                                    <span>BDT 1100</span>
+                                    <h6>BDT<span>1100</span></h6>
                                 </div>
                                 <!-- cupon apply section  -->
                                 <div>
         
                                     <label class="input input-bordered flex items-center gap-2">
                                         <input type="text" class="grow" placeholder="Have any copupon?" />
-                                        <span class="badge bg-[#1DD100]">Apply</span>
+                                        <button class="btn m-2 bg-[#1DD100] rounded">Apply</button>
+                                        
                                     </label>
         
                                 </div>
@@ -368,7 +369,7 @@
                                 </label>
         
                                 <div class="mt-8">
-                                    <button class="btn w-96 bg-[#1DD100] text-white">Next</button>
+                                    <button onclick="next()" class="btn w-96 bg-[#1DD100] text-white">Next</button>
                                 </div>
         
                             </div>
@@ -423,7 +424,7 @@
 
     </section>
     <!-- section success and continue -->
-    <section class="continue-section hidden">
+    <section id="success-continue" class="continue-section hidden">
         <div class="flex flex-col border w-96 p-2 rounded-lg justify-center items-center m-auto mt-56">
             <img src="images/success.png" alt="">
             <h1 class="text-2xl font-bold text-[#1DD100]">SUCCESS</h1>
@@ -436,7 +437,8 @@
 
     </section>
 
-    <script src=""></script>
+    
+    <script src="scripts/ph-script.js"></script>
 
 </body>
 
